@@ -8,8 +8,8 @@ mongoose.connect(process.env.MONGODB_URI)
 
         // start the server
         app.listen(3001, () => {
-            console.log('Server started on http://localhost:3001');
-        });
+            console.log('Server started on  http://localhost:3001');
+        }); 
     })
     .catch(err => {
         console.log('Error connecting to MongoDB!', err);
