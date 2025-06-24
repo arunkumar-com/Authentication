@@ -1,3 +1,4 @@
+
 const express = require("express");
 const { check } = require("express-validator");
 const authController = require("../controllers/authControllers");
@@ -16,8 +17,9 @@ const validateLogin = [
   check("password", "Password is required").notEmpty(),
 ];
 
-// Apply validation middleware
+// Routes
 router.post("/register", validateRegistration, authController.register);
 router.post("/login", validateLogin, authController.login);
+router.post("/logout", authController.logout); // Added logout route
 
 module.exports = router;
